@@ -27,7 +27,7 @@ module Control(
 
     assign reduced = opcode[6:4]; // controlled by upper 3 bits
 
-    always @(opcode or posedge rst_i or negedge noop) begin
+    always @(opcode or posedge rst_i or noop) begin
         if(rst_i) begin
             MemWrite_o <= 1'b0;
             RegWrite_o <= 1'b0;
